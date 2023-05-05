@@ -16,7 +16,7 @@ def create(request):
         todo.category = request.POST.get('category')
         todo.description = request.POST.get('description')
         todo.save()
-        return redirect('index')
+        return redirect('/home/index')
     return render(request, 'create.html')
 
 def update(request, id):
